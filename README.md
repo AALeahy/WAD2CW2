@@ -5,6 +5,6 @@ To run the application:
 Open folder in VSCode  
 Install dependencies  
 Open terminal window  
-Enter npm run  
+Enter node index  
 Open browser  
 Enter localhost:3000  
