@@ -1,0 +1,25 @@
+<html>
+    <head>
+        {{>header}}
+    </head>
+    <body>
+    {{>nav}}
+        <h1 class="text-center mt-4">Sign In</h1>
+        <div class="w-100 d-flex flex-col justify-content-center mt-4">
+            <form method="POST" role="/login">
+                <div class="form-group">
+                    {{user-name-error}}
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group mt-4 text-center">
+                    <input type="submit" value="Sign in" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

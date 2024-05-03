@@ -1,0 +1,33 @@
+<html>
+    <head>
+        {{>header}}
+    </head>
+    <body>
+        {{>nav}}
+        <div class="d-flex flex-row justify-content-between m-5">
+            {{^user}}
+            <div>
+                <a id="login" href="/login" class="btn btn-primary">Sign In</a>
+                <a id="login" href="/register" class="btn btn-primary">Register</a>
+            </div>
+            {{/user}}
+            {{#user}}
+            <a id="logout" href="/logout" class="btn btn-primary">Sign Out</a>
+            <a href="/new" class="btn btn-primary">Add food item</a>
+            {{/user}}
+        </div>
+    {{#entries}}
+        <div class="card shadow-sm m-5 p-3">
+            <h4>{{name}}</h4>
+            <div>
+                <p>{{description}}</p>
+            </div>
+            <div>
+                Quantity: {{quantity}}<br>
+                Expiry Date: {{expiry}}<br>
+                Provider: {{owner}}<br>
+            </div>
+        </div>
+    {{/entries}}
+    </body>
+</html>
